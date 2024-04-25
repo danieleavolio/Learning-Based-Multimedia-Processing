@@ -5,9 +5,9 @@
 The main technique is **sampling**. Discretization in time. Take a signal and every so often take a sample of it. This is the basis of digital signal processing.
 
 [Sampling theorem](#Sampling-theorem)
-
-f_s > 2f_max
-
+$$
+f_s > 2f_{max}
+$$
 That means that the sampling frequency must be greater than twice the maximum frequency of the signal.
 
 [What is a problem of subsampling images?](#What-is-a-problem-of-subsampling-images)
@@ -242,9 +242,7 @@ Consider an application that uses and audio signal with maximum frequency of 8 k
 So, we have max freq = 8000 Hz and 8 bits/sample. We need to calculate the bitrate.
 
 $$
-
 b = 8000 \times 2 samples/s \times 8 bit/sample = 128 kbps
-
 $$
 
 Note that we are doing 2 samples/s because we need to sample the signal at least twice the maximum frequency.
@@ -311,9 +309,7 @@ d = f \frac H h
 $$
 
 $$
-
 d = 0.01 \frac {0.1} {200 \times 5 \times 10^{-6}} = 1
-
 $$
 
 We are doing *200* x *5* x *10^-6* because we have 200 pixels and each pixel is 5 micrometers.
@@ -325,17 +321,13 @@ Consider a digital image of size 1000 x 1000 pixels, each pixel represented usin
 We have 1000 x 1000 pixels and each pixel is represented using 8 bits. So we have:
 
 $$
-
 b = 1000 x 1000 x 8 = 8 Mbits
-
 $$
 
 This is if the image is black and white. If the image is colored, we have 3 channels and we need to multiply by 3:
 
 $$
-
 b = 1000 x 1000 x 8 x 3 = 24 Mbits
-
 $$
 
 So, in order to solve this problem, we need to compress the image. We can exploit redundancy and irrelevancy to compress the image.
